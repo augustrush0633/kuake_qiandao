@@ -1,5 +1,5 @@
 # 夸克自动签到
-该仓库是对下面开源项目的精简版本，主要功能是自动签到，并通知到邮箱。
+该仓库是对下面开源项目的精简版本，主要功能是自动签到，并通知到邮箱或者推送Sever酱。
 ## 参考开源项目
 
 [Auto_Check_In](https://github.com/BNDou/Auto_Check_In/blob/main/checkIn_Quark.py)
