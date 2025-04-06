@@ -16,6 +16,9 @@ if kps is None or sign is None or vcode is None:
     logger.error("请设置 QUARK_KPS 或者 QUARK_SIGN 或者 QUARK_VCODE")
     raise ValueError("请设置 QUARK_KPS 或者 QUARK_SIGN 或者 QUARK_VCODE")
 
+# server酱
+SCKEY = os.environ.get('SCKEY')
+
 # 邮箱通知
 SMTP_SERVER = os.getenv("SMTP_SERVER")
 SMTP_PORT = os.getenv("SMTP_PORT", default=25)  # 587 TLS 端口，使用 465 代表 SSL
