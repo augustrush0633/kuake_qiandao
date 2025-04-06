@@ -65,7 +65,7 @@ def human_unit(bytes_: int) -> str:
         i += 1
     return f"{bytes_:.2f} {units[i]}"
 
-
+#通知消息
 def send_email(body: str):
     SUBJECT = "夸克网盘自动签到"
     try:
@@ -88,6 +88,7 @@ def send_email(body: str):
 
 
 def user_info():
+    global SEKEY
     """
     获取用户信息
     :return: None
@@ -122,6 +123,11 @@ def user_info():
                            f"使用百分比：{data['use_capacity'] / data['total_capacity'] * 100:.2f}%")
         logger.info(notify_message)
         if config_is_ok:
+            # 进行推送
+            if SCKEY != '':
+                push_url = 'https://sctapi.ftqq.com/{}.send?title=夸克网盘签到&desp={}'.format(SCKEY, notify_message)
+                requests.post(url=push_url)
+                print('推送成功')
             send_email(notify_message)
 
 

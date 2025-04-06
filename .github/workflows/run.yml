@@ -29,6 +29,7 @@ jobs:
 
       - name: Run Python script with UV
         env:
+          SCKEY: ${{ secrets.SCKEY }}
           QUARK_KPS: ${{ secrets.QUARK_KPS }}
           QUARK_SIGN: ${{ secrets.QUARK_SIGN }}
           QUARK_VCODE: ${{ secrets.QUARK_VCODE }}
