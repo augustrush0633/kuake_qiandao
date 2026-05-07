@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest  # 运行环境：Ubuntu 最新版
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # 检查代码
+        uses: actions/checkout@v5  # 检查代码
 
       - name: astral-sh/setup-uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v7
         with:
           enable-cache: false
           cache-dependency-glob: false
