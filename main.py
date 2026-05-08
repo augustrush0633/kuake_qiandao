@@ -100,7 +100,7 @@ def user_info():
     else:
         data = content["data"]
         super_vip_exp_at = datetime.fromtimestamp(
-            data["super_vip_exp_at"] / 1000
+            data.get("super_vip_exp_at", 0) / 1000
         ).strftime("%Y-%m-%d %H:%M:%S")
         cap_sign = data["cap_sign"]
         notify_message = ""
